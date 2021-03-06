@@ -1,8 +1,20 @@
 function findMatching (list, name) {
-    return list.filter(function (driverName) {
-      return driverName.toLowerCase() === name.toLowerCase();
-    });
+    let findList = []
+    for(let i=0; i<list.length; i++){
+        if(list[i].toLowerCase() === name.toLowerCase()){
+            findList.push(list[i]);
+            }
+        
+        
+    }
+    return findList 
+   // return list.filter(function (driverName) {
+   //   return driverName.toLowerCase() === name.toLowerCase();
+    // });
+
   }
+
+
   
   function fuzzyMatch (list, partialName) {
     let lengthOfName = partialName.length;
